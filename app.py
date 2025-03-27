@@ -37,6 +37,10 @@ def load_data():
 
 df = load_data()
 
+# Check if DataFrame is empty after loading
+if df.empty:
+    st.stop()  # Stop execution if DataFrame is empty
+
 # Sidebar filters
 with st.sidebar:
     st.header("🎛️ Control Panel")
